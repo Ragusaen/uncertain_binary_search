@@ -28,7 +28,7 @@ def random_test():
     for i in range(10000):
         N = random.randint(3, 20)
         sim = TestSimulator(N, 1.0, random.random() * 0.99 + 0.01)
-        bis = ProbabilisticBisection2(N)
+        bis = ProbabilisticBisection(N)
         print(N, sim.true_negative_rate)
 
         if sim.bad_point == run(sim, bis):
